@@ -1,0 +1,43 @@
+<div id ="klas"></div>
+
+<script>
+var a ='{ "name":"John", "age":30, "city":"New York"}';
+console.log(a);
+var obj = JSON.parse(a);
+console.log(obj);
+console.log(obj.name);
+console.log(obj.age);
+console.log(obj.city);
+console.log(obj.city_birth);
+console.log('---------------');
+var fieldname = 'city';
+console.log(obj['city']);
+console.log(obj[fieldname]);
+console.log(obj.fieldname);
+var u1={klas:'1a',rist:'120',imya:'ivanov'}
+var u2={klas:'2c',rist:'120',imya:'sidorov'}
+var u3={klas:'2b',rist:'125',imya:'petrov'}
+var u4={klas:'2a',rist:'115',imya:'vasechkin'}
+var a  = [];
+a.push(u1);
+a.push(u2);
+a.push(u3);
+a.push(u4);
+var div_k = document.getElementById('klas');
+var aaa = [{klas:'1a',rist:'120',imya:'ivanov'},{klas:'2c',rist:'120',imya:'sidorov'},{klas:'2b',rist:'125',imya:'petrov'},{klas:'2a',rist:'115',imya:'vasechkin'}, ];           
+a.forEach(function(item,index,array)
+{div_k.innerHTML +='<div class="imya">'+item.imya+
+'</div><div class="klas">'+item.klas+
+'</div><div class="rist">'+item.rist+"</div>"});
+div_k.innerHTML += "<br><br><br>-------------<br><br><br>";
+aaa.forEach(function(item,index,array)
+{div_k.innerHTML +='<div class="imya">'+item.imya+
+'</div><div class="klas">'+item.klas+
+'</div><div class="rist">'+item.rist+"</div>"});
+var fruits = ['Яблоко', 'Банан'];
+//console.log(fruits.length);
+ fruits.push('kavun');
+fruits.forEach(function(item,index,array)
+{console.log(item)}
+); 
+</script>
